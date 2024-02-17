@@ -7,6 +7,8 @@ objects = $(sources:.c=.o)
 flags = -g -Wall -lm -ldl -fPIC -rdynamic -I./include
 # flags = -I./include
 
+all: $(exec)
+
 $(exec): $(objects)
 	gcc $(objects) $(flags) -o $(exec)
 
